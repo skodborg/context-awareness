@@ -77,7 +77,7 @@ public class ActivityMonitor {
 
         _listener = getListener();
 
-        _sensorManager.registerListener(_listener, _sensor, SensorManager.SENSOR_DELAY_NORMAL);
+        _sensorManager.registerListener(_listener, _sensor, SensorManager.SENSOR_DELAY_FASTEST);
 
     }
     private SensorEventListener getListener(){
