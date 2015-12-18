@@ -168,7 +168,7 @@ public class ActivityMonitor {
         }
 
         if(!currentState.equals(state) && nextPossibleState.equals(state)){
-            if(tryToShiftState <= 1){
+            if(tryToShiftState <= 6){
                 if(tryToShiftState == 1){
 
                     currentPosition = getCurrentPosition();
@@ -178,13 +178,13 @@ public class ActivityMonitor {
                 currentState = state;
                 nextPossibleState = "none";
                 tryToShiftState = 0;
-                //if(currentState.equals("Walking")) {
+                if(currentState.equals("Walking")) {
 
 
                         updateLocationForBike();
                         Toast.makeText(_androidActivity.getApplicationContext(), "position found", Toast.LENGTH_SHORT);
 
-            //}
+                }
                 WriteToFile.writeToFile("shiftingState.txt", "state shifted.\n", true);
             }
         }
