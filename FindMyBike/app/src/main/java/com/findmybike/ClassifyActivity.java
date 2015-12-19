@@ -73,7 +73,8 @@ public class ClassifyActivity {
 
     private void setupModel(){
         try {
-            InputStream is = _activity.getResources().openRawResource(R.raw.test);
+            //InputStream is = _activity.getResources().openRawResource(R.raw.test);
+            InputStream is = _activity.getResources().openRawResource(R.raw.full_data);
             ObjectInputStream ois = new ObjectInputStream(is);
 
             _classifier =  (Classifier) ois.readObject();
